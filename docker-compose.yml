@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+  freshrss: 
+    image: freshrss:latest 
+    ports:
+      - 8087:80
+    restart: always
+  freshrss-db:
+    image: mysql:5.6
+    environment:
+      MYSQL_ROOT_PASSWORD: 4335b345ace04ea468bada82a0b3e152
+    restart: always
